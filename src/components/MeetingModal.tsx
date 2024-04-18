@@ -35,7 +35,7 @@ const MeetingModal = ({
                     {image && (
                         <div className="flex justify-center">
                             <Image
-                                src="image"
+                                src={image}
                                 alt="image"
                                 width={72}
                                 height={72}
