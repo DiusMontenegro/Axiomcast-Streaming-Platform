@@ -4,14 +4,20 @@ import React from 'react';
 const Home = () => {
     const now = new Date();
 
-    const time = now.toLocaleTimeString('en-PH', {
+    const options: Intl.DateTimeFormatOptions = {
         hour: '2-digit',
         minute: '2-digit',
-    });
+        timeZone: 'Asia/Manila',
+    };
 
-    const date = new Intl.DateTimeFormat('en-PH', {
+    const time = now.toLocaleTimeString('en-PH', options);
+
+    const dateOptions: Intl.DateTimeFormatOptions = {
         dateStyle: 'full',
-    }).format(now);
+        timeZone: 'Asia/Manila',
+    };
+
+    const date = new Intl.DateTimeFormat('en-PH', dateOptions).format(now);
 
     return (
         <section className="flex size-full flex-col gap-10 text-white">
