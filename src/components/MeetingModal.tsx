@@ -29,7 +29,7 @@ const MeetingModal = ({
     children,
 }: MeetingModalProps) => {
     return (
-        <Dialog open={isOpen}>
+        <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent className="flex w-full max-w-[520px] flex-col gap-6 border-none bg-light-1 px-6 py-9 text-[#1c1c1c]">
                 <div className="flex flex-col gap-6">
                     {image && (
